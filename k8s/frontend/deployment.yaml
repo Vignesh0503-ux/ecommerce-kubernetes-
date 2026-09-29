@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   replicas: 1
   selector:

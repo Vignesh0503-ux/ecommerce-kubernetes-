@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: ecommerce-test-job
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   template:
     spec:
@@ -15,3 +15,4 @@ spec:
             - -c
             - echo "E-commerce Kubernetes Job executed successfully"
   backoffLimit: 2
+

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ecommerce-config
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 data:
   DB_HOST: postgres
   DB_PORT: "5432"

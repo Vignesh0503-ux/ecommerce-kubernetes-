@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-service
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   replicas: 1
   selector:
@@ -77,3 +77,4 @@ spec:
                 secretKeyRef:
                   name: ecommerce-db-secret
                   key: DB_PASSWORD
+

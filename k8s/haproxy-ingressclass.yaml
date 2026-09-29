@@ -4,3 +4,4 @@ metadata:
   name: haproxy
 spec:
   controller: haproxy.org/ingress-controller/haproxy
+

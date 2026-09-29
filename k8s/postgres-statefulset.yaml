@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgres-stateful
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   serviceName: postgres-stateful
   replicas: 1
@@ -46,3 +46,4 @@ spec:
         resources:
           requests:
             storage: 5Gi
+

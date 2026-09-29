@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   selector:
     app: frontend

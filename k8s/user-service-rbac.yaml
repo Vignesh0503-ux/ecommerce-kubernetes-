@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: user-service-read
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 rules:
   - apiGroups: [""]
     resources:
@@ -17,11 +17,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: user-service-read-binding
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 subjects:
   - kind: ServiceAccount
     name: user-service-sa
-    namespace: ecommerce
+    namespace: ecommerce-argocd
 roleRef:
   kind: Role
   name: user-service-read

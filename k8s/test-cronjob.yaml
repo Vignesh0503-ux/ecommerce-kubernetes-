@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: ecommerce-test-cronjob
-  namespace: ecommerce
+  namespace: ecommerce-argocd
 spec:
   schedule: "*/2 * * * *"
   jobTemplate:
@@ -18,3 +18,4 @@ spec:
                 - -c
                 - echo "E-commerce CronJob executed at $(date)"
       backoffLimit: 2
+
