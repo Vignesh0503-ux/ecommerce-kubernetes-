@@ -6,10 +6,10 @@ metadata:
 spec:
   ingressClassName: haproxy
 
-  tls:
-    - hosts:
-        - shopli.local
-      secretName: ecommerce-tls
+#  tls:
+#    - hosts:
+#        - shopli.local
+#      secretName: ecommerce-tls
 
   rules:
     - host: shopli.local
