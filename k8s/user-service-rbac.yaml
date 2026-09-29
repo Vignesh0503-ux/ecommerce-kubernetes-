@@ -1,0 +1,28 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: user-service-read
+  namespace: ecommerce
+rules:
+  - apiGroups: [""]
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+      - watch
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: user-service-read-binding
+  namespace: ecommerce
+subjects:
+  - kind: ServiceAccount
+    name: user-service-sa
+    namespace: ecommerce
+roleRef:
+  kind: Role
+  name: user-service-read
+  apiGroup: rbac.authorization.k8s.io

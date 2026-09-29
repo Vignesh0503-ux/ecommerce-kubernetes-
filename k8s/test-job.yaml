@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ecommerce-test-job
+  namespace: ecommerce
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: test-job
+          image: busybox:1.36
+          command:
+            - sh
+            - -c
+            - echo "E-commerce Kubernetes Job executed successfully"
+  backoffLimit: 2

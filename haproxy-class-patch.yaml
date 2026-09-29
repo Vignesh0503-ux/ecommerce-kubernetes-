@@ -1,0 +1,8 @@
+spec:
+  template:
+    spec:
+      containers:
+        - name: haproxy-ingress
+          args:
+            - --configmap=haproxy-controller/haproxy-kubernetes-ingress
+            - --ingress.class=haproxy
